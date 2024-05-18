@@ -1,3 +1,4 @@
+import json
 from django.contrib.auth import logout
 from rest_framework.response import Response
 from rest_framework import status, generics, permissions
@@ -25,6 +26,8 @@ class RegisterUser(generics.CreateAPIView):
         serializer = self.get_serializer(data=request.data)
         if serializer.is_valid():
             user = serializer.create(serializer.validated_data)
+            if user is not None:
+                pass
             return Response({user.username}, status=status.HTTP_201_CREATED)
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

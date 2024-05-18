@@ -6,12 +6,13 @@ from django.contrib.auth.hashers import make_password
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['username', 'password', 'email']
+        fields = ['username', 'password', 'email', 'first_name', 'last_name']
         extra_kwargs = {
             'password': {'write_only': True}
         }
 
     def create(self, validated_data):
+        print(validated_data)
         password = validated_data.pop('password', None)
         instance = self.Meta.model(**validated_data)
         instance.is_active = True
