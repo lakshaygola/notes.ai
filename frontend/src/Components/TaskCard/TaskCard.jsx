@@ -158,7 +158,7 @@ export const TaskCard = function (){
     }
 
     useEffect(() => {
-        axios.get("http://localhost:8000/task/all-task", {
+        axios.get("http://localhost:8000/api/todo/app/all/todos", {
             headers: {
                 "Authorization": "OH4H9CSAT0W",
             }
