@@ -1,29 +1,30 @@
-import styled from "styled-components";
+import { useState } from "react";
 import { FaPlus } from "react-icons/fa6";
+import "../../styles/base.css"
+import CreateTaskModal from "../Modals/CreateTaskModal";
 
-const PlusIconBtn = styled.button`
-    border: 5px solid #F4CE14;
-    border-radius: 50%;
-    width: 50px;
-    height:50px;
-    background-color: transparent;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    transition: all 0.2s ease-out;
-    color: #F4CE14;
-    font-size: 20px;
 
-    &: hover{
-        background-color: #F4CE14;
-        color: white;
-    }
-`;
 
 export const PlusIcon = function () {
+
+    const [modal, setModal] = useState(false);
+
+    const toggleModal = () => {
+        setModal(!modal);
+        console.log(modal);
+    };
+
     return (
-        <PlusIconBtn>
-            <FaPlus/>
-        </PlusIconBtn>
+        <>
+            <div className="add-task-btn" onClick={toggleModal}>
+                <FaPlus className="add-task-icon"/>
+            </div>
+
+            {(modal) && (
+                <CreateTaskModal 
+                    toggleModal={toggleModal}
+                    route="api/todo/app/create/"/>
+            )}
+        </>
     );
 }

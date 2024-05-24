@@ -6,7 +6,7 @@ import ProtectedRoute from './Components/ProtectedRoute/ProtectedRoute';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Header } from './Components/Header/Header';
 import ChangePassword from './Components/ChangePassword/ChangePassword';
-
+import CreateTask from './Components/CreateTask/CreateTask';
 
 function Logout() {
   localStorage.clear();
@@ -26,7 +26,6 @@ function RegisterAndLogout() {
 function App() {
   return (
     <>
-      <Header/>
       <BrowserRouter>
         <Routes>
 
@@ -35,6 +34,16 @@ function App() {
               <Home />
             </ProtectedRoute>
           }/>
+          <Route path='/home' element={
+            <ProtectedRoute>
+              <Home />
+            </ProtectedRoute>
+          }/>
+          <Route path='/create/task/' element={
+            <ProtectedRoute>
+              <CreateTask/>
+            </ProtectedRoute>
+            }/>
           <Route path='/login' element={<Login/>} />
           <Route path='/register' element={<RegisterAndLogout />} />
           <Route path='/logout' element={<Logout />}/>

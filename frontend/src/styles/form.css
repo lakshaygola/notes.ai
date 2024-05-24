@@ -1,0 +1,89 @@
+.login-register-container{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.top-container{
+    /* border: 1px solid black; */
+    height: 10vh;
+    position: absolute
+}
+
+.left-container{
+    /* border: 1px solid red; */
+    min-width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-header{
+    font-size: 4rem;
+}
+
+.tag-line{
+    font-size: 2.2rem;
+}
+
+.tag-line i{
+    color: var(--primary-color);
+}
+
+.right-container{
+    /* border: 1px solid blue; */
+    min-width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.register-margin{
+    margin-bottom: 20px;
+}
+
+.login-register-greeting-msg{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+
+.login-register-form {
+    /* border: 1px solid black; */
+    width: 100%;
+    min-height: 25vh;
+    max-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+
+.login-resgister-form-input {
+    padding: 9px;
+    border: 0.5px solid;
+    border-radius: 7px;
+    min-width: 60%;
+}
+
+.form-name-container, .form-password-container{
+    display: flex;
+    gap: 5%;
+    /* border: 1px solid black; */
+    width: 60%;
+}
+
+.first-name-input, .last-name-input, .password-register-input, .confirm-password-input{
+    min-width: 45%;
+}
+
+
+
+.form-btn-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
