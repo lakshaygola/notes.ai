@@ -1,0 +1,65 @@
+.primary-btn {
+    border: 3px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 10px;
+    background-color: var(--primary-color);
+    min-width: 7vw;
+    transition: all ease-in 0.3s;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+}
+
+.primary-btn:hover {
+    background-color: transparent;
+    border: 3px solid var(--primary-color);
+
+}
+
+.secondary-btn {
+    border: 3px solid var(--primary-accent-color);
+    border-radius: 10px;
+    padding: 10px;
+    background-color: var(--primary-accent-color);
+    min-width: 7vw;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    transition: all ease-in 0.3s;
+}
+
+.secondary-btn:hover{
+    background-color: transparent;
+    border: 3px solid var(--primary-accent-color);
+}
+
+.capitalize:first-letter {
+    text-transform: uppercase;
+}
+
+.add-task-btn {
+    border: 5px solid var(--primary-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    transition: all 0.2s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-task-btn:hover{
+    background-color: var(--primary-color);
+
+    .add-task-icon {
+        color: white;
+    }
+}
+
+.add-task-icon {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    transition: all 0.2s ease-out;
+}

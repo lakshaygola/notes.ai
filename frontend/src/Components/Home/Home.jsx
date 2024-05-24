@@ -5,6 +5,7 @@ import { TaskCard } from '../TaskCard/TaskCard';
 function Home() {
     return (
         <>
+            <Header/>
             <TaskCard />
             <PlusIcon />
         </>

@@ -1,0 +1,39 @@
+.header-container{
+    background-color: var(--primary-dark-accent-color);
+    height: 8vh;
+    min-width: 100vw;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.logo-container{
+    margin-inline: 20px;
+    min-width:10vw;
+    height: 100%;
+}
+
+.logo-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.detail-container{
+    margin-inline: 20px;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.detail-container h4{
+    color: white;
+}
+
+.profile-icon, .info-icon{
+    color: var(--primary-accent-color);
+    font-size: 1.2rem;
+}

@@ -19,6 +19,10 @@ code {
     monospace;
 }
 
-.root{
-  background-color: #F5F7F8;
+:root{
+  --primary-color: #FACC15;
+  --primary-accent-color: #E4E4E7;
+  --secondary-accent-color: #8B8B9A;
+  --primary-dark-accent-color: #18181B;
+  --secondary-dark-accent-color: #393940;
 }

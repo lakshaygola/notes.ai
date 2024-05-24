@@ -1,35 +1,28 @@
-import styled from "styled-components";
-
-const HeaderDiv = styled.div`
-    margin: 0;
-    padding: 10px;
-    background-color: #F4CE14;
-    display: flex;
-    justify-content: space-between;
-`;
-
-const HeaderH1 = styled.h1`
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    color: #495E57
-`;
-
-const HeaderBtn = styled.button`
-    background-color: #495E57;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    padding: 15px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-`;
+import "../../styles/header.css";
+import { useLocation } from "react-router-dom";
+import notesai_transparent_bg from "../../Media/notesai_transparent_bg.png";
+import { FaRegUser, FaInfo } from "react-icons/fa";
 
 export const Header = function () {
+
+    const location = useLocation();
+    const path = location.pathname;
+
+    const isHome = path === "/" || path === "/home";
+
     return (
-        <HeaderDiv className="header">
-            <HeaderH1 className="header-heading">Keeper App</HeaderH1>
-            <HeaderBtn>Login</HeaderBtn>
-        </HeaderDiv>
+        <div className="header-container">
+            <div className="logo-container">
+                <img src={notesai_transparent_bg} alt="" srcset="" />
+            </div>
+            {(isHome && (
+                <div className="detail-container">
+                    <FaInfo className="info-icon"/>
+                    <FaRegUser className="profile-icon"/>
+                </div>
+            ))}
+        </div>
     );
 }
+
+export default Header;
