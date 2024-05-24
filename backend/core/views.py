@@ -23,6 +23,8 @@ class RegisterUser(generics.CreateAPIView):
         request: http request object
         *args, **kwargs: additional arguments
         """
+
+        # TODO - Password validation
         serializer = self.get_serializer(data=request.data)
         if serializer.is_valid():
             user = serializer.create(serializer.validated_data)
